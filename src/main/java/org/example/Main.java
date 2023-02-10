@@ -6,10 +6,10 @@ import java.util.logging.Logger;
 class Contacts
 {
     String name;
-    int phonenumber;
+    long phonenumber;
     String emailaddress;
     Contacts nextnode;
-    Contacts(String name,int phonenumber,String emailaddress)
+    Contacts(String name,long phonenumber,String emailaddress)
     {
         this.name=name;
         this.phonenumber=phonenumber;
@@ -21,7 +21,7 @@ class  Contactop{
     Contacts current=null;
     Contacts prev=null;
     private static final Logger logger = Logger.getLogger("InfoLogging");
-    void add(String name,int phonenumber,String emailaddress)
+    void add(String name,long phonenumber,String emailaddress)
     {
         Contacts newcontact = new Contacts(name,phonenumber,emailaddress);
         if(this.head==null)
@@ -89,7 +89,7 @@ public class Main {
                 logger.info("Enter the name:");
                 String name= sc.next();
                 logger.info("Enter the phonenumber:");
-                int phonenumber= sc.nextInt();
+                long phonenumber= sc.nextLong();
                 logger.info("Enter the email Id:");
                 String id =sc.next();
                 list.add(name,phonenumber,id);
