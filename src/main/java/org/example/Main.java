@@ -70,6 +70,7 @@ class  Contactop{
                 if(current.nextnode!=null) {
                     current = current.nextnode;
                 }
+                break;
             }
         }
     }
