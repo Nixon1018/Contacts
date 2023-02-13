@@ -62,15 +62,13 @@ class  Contactop{
             logger.info("The contact list is empty");
         }
         else {
-            this.current=head;
-            while(current.name.equals(name)){
-
-                String z="Match found:"+current.name+" "+current.phonenumber+" "+current.emailaddress;
-                logger.info(z);
-                if(current.nextnode!=null) {
-                    current = current.nextnode;
+            this.current=this.head;
+            while(current!=null){
+                if(current.name.equals(name)) {
+                    String z="Match found:"+current.name+" "+current.phonenumber+" "+current.emailaddress;
+                    logger.info(z);
                 }
-                break;
+                current = current.nextnode;
             }
         }
     }
